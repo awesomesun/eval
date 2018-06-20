@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Parameters Display!</h1>
+    {% for line in file %}
+    <div><p>{{ line.split(':')[0]}} : <b>{{ line.split(':')[1] }}</b></p></div>
+    {% endfor %}
+{% endblock %}

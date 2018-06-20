@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Tuling Evaluation</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.model.label }}<br>
+            {{ form.model(size=32) }}<br>
+            {% for error in form.model.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.typeofcar.label }}<br>
+            {{ form.typeofcar(size=32) }}<br>
+            {% for error in form.typeofcar.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.hide.label }}<br>
+            {{ form.hide(size=32) }}<br>
+            {% for error in form.hide.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.ignore.label }}<br>
+            {{ form.ignore(size=32) }}<br>
+            {% for error in form.ignore.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.typeofroad.label }}<br>
+            {{ form.typeofroad(size=32) }}<br>
+            {% for error in form.typeofroad.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.weather.label }}<br>
+            {{ form.weather(size=32) }}<br>
+            {% for error in form.weather.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.cipv.label }}<br>
+            {{ form.cipv(size=32) }}<br>
+            {% for error in form.cipv.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

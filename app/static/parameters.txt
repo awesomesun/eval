@@ -1,0 +1,7 @@
+model: 1111
+typeofcar: car
+hide: 50
+ignore: 1
+typeofroad: 1
+weather: sunny
+cipv: 0

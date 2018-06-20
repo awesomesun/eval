@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome to Eval, {{ current_user.username }}!</h1>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }} <b>{{ post.body }}</b></p></div>
+    <p><a href="{{ url_for('tuling_eval') }}"> Tuling </a></p>
+    {% endfor %}
+{% endblock %}
